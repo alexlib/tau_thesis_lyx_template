@@ -8,10 +8,16 @@ Tel Aviv University LaTeX and LyX styles are adopted from the University of Cant
 created by Etienne Laliberté, June 2009
 http://www.assembla.com/code/psyche/subversion/nodes/thesis?rev=5
 
-Download
+Download 
 ---------
 
+The single compressed Zip file:
+
 https://github.com/alexlib/tau_thesis_lyx_template/zipball/master
+
+or using Git:
+
+        git clone git@github.com:alexlib/tau_thesis_lyx_template.git
 
 
 Installation
