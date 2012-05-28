@@ -1,0 +1,112 @@
+%% LyX 2.0.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[12pt,oneside,english]{tauthesis}
+\usepackage{mathptmx}
+\renewcommand{\familydefault}{\rmdefault}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm,headheight=1cm,headsep=1cm,footskip=1cm}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{verbatim}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{nomencl}
+% the following is useful when we have the old nomencl.sty package
+\providecommand{\printnomenclature}{\printglossary}
+\providecommand{\makenomenclature}{\makeglossary}
+\makenomenclature
+\doublespacing
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\providecommand{\LyX}{L\kern-.1667em\lower.25em\hbox{Y}\kern-.125emX\@}
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+%% A simple dot to overcome graphicx limitations
+\newcommand{\lyxdot}{.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage[font={small,bf}, labelfont={small,bf}, margin=1cm]{caption}
+\Title{\textbf{Thesis Title}}
+\Author{Israel Israeli}
+\Year{Month 2012}
+\Supervisor{Prof. Israel Israeli}
+\Department{School of Mechanical Engineering}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+\begin{comment}
+This is Micheal JasonSmith's uocthesis example ported to \LyX{} by
+Etienne Laliberté (etiennlaliberte@gmail.com).
+
+Alex Liberzon (alex.liberzon@gmail.com) modified it to the Tel Aviv
+University format, with the logo of the Faculty of Engineering. Change
+the file taulogo.png to get the logo of your department.
+
+Go to \textsf{Document > Settings > \LaTeX{} preamble} to modify the
+\textsf{Title, Author, Year, Supervisor, Department} fields.
+\end{comment}
+
+
+\prelimpages
+
+\titlepage
+
+\begin{comment}
+Split the thesis into separate chapters. Use \textbackslash{}include
+mode to include the separate files.
+
+Use \LyX{} Table of Contents, List of Figures, List of Tables and
+Nomenclature automatics to include them in the thesis. Double - click
+on each item to change the default level of contents, move the chapters
+up/down and so on.
+\end{comment}
+
+
+\include{Abstract}
+
+\tableofcontents{}
+
+\acknowledgments{I would like to thank my ...}
+
+\textpages
+
+\listoffigures
+
+
+\listoftables
+
+
+\printnomenclature{}
+
+\include{Introduction}
+
+\bibliographystyle{plainnat}
+\bibliography{IEEEabrv}
+
+
+\appendix
+\include{appendix}
+
+\newpage{}
+
+\begin{comment}
+It is possible to create the Hebrew part in \LyX{}, but this is less
+of our concern. Any typesetting software like \LyX{} (or Word or OpenOffice)
+is as good for this purpose. After creating the PDF file from the
+Hebrew document, include it here using the Insert -> File -> External
+material -> PDFpages (one of the options). See the example below. 
+\end{comment}
+
+
+\includepdf[pages=-]{hebrew_part}
+\end{document}

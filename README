@@ -1,0 +1,17 @@
+Etienne Laliberté, June 2009
+etiennelaliberte@gmail.com
+
+University of Canterbury LaTeX and LyX styles
+
+To install uocthesis:
+
+1) copy uocthesis.cls to the appropriate LaTeX folder, e.g. under Ubuntu, copy it to: /usr/share/texmf/tex/latex
+2) run "texhash" from the command line
+3) copy uocthesis.layout to the appropriate LyX folder, e.g. under Ubuntu, copy it to: /usr/share/lyx/layouts
+4) Reconfigure LyX by going to Tools > Reconfigure
+
+In LyX, the uocthesis style should now be available as a new document class.
+
+Make sure the UClogo files (eps + pdf) are in the same folder as your document.
+
+5) Open the example-thesis.lyx file, and replace the fields with your text to write your thesis.
