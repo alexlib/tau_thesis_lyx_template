@@ -24,6 +24,6 @@ To install it:
 2. run "texhash" from the command line
 3. copy tauthesis.layout to the appropriate LyX folder, e.g. under Ubuntu, copy it to: /usr/share/lyx/layouts
 4. Reconfigure LyX by going to Tools > Reconfigure
-  *In LyX, the tauthesis style should now be available as a new document class.
-  *Make sure the TAU logo files (eps + pdf + png) are in the same folder as your document.
++ In LyX, the tauthesis style should now be available as a new document class.
++ Make sure the TAU logo files (eps + pdf + png) are in the same folder as your document.
 5. Open the Thesis-main.lyx file, and replace the fields with your text to write your thesis.
