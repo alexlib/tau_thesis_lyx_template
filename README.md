@@ -1,3 +1,6 @@
+Tel Aviv University LaTeX and LyX styles
+-----------------------------------------
+
 Alex Liberzon, May 2012
 http://www.eng.tau.ac.il/~alexlib
 
@@ -5,8 +8,17 @@ Tel Aviv University LaTeX and LyX styles are adopted from the University of Cant
 created by Etienne Laliberté, June 2009
 http://www.assembla.com/code/psyche/subversion/nodes/thesis?rev=5
 
+Download
+---------
 
-To install tauthesis:
+https://github.com/alexlib/tau_thesis_lyx_template/zipball/master
+
+
+Installation
+------------
+
+
+To install it:
 
 1) copy tauthesis.cls to the appropriate LaTeX folder, e.g. under Ubuntu, copy it to: /usr/share/texmf/tex/latex
 2) run "texhash" from the command line
