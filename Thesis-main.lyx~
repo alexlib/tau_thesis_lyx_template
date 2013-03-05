@@ -35,7 +35,7 @@ Input book.layout
 \font_tt_scale 100
 
 \graphics default
-\default_output_format pdf3
+\default_output_format default
 \output_sync 0
 \bibtex_command bibtex
 \index_command default
@@ -108,12 +108,6 @@ Document > Settings > LaTeX preamble
 Title, Author, Year, Supervisor, Department
 \family default
  fields.
-\end_layout
-
-\begin_layout Plain Layout
-Default processor is now DVIPDFM - but if you can choose something else,
- try PDFLATEX and XELATEX - sometimes these are a bit faster.
- 
 \end_layout
 
 \end_inset
@@ -264,27 +258,9 @@ filename "Introduction.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Want to add one more chapter, just copy paste the file introduction.lyx into
- the new_chapter.lyx or anything like that and copy-paste the above line
- with Include: Introduction.lyx and change the name to new_chapter.lyx.
- All the format and proper numbering of figures, tables, etc.
- will be automaticaly updated.
- Just start typing the text :)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "references"
+bibfiles "IEEEabrv"
 options "plainnat"
 
 \end_inset
