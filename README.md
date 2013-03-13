@@ -11,8 +11,7 @@ http://www.assembla.com/code/psyche/subversion/nodes/thesis?rev=5
 An example in PDF
 -----------------
 
-[Link to the Thesis_main.pdf file via Google docs](https://docs.google.com/viewer?url=https%3A%2F%2Fgithub.com%2Falexlib%2Ftau_thesis_lyx_template%2Fblob%2Fmaster%2FThesis-main.pdf%3Fraw%3Dtrue)
-
+[Link to the Thesis_main.pdf built online thanks to latex.aslushnikov.com](http://latex.aslushnikov.com/compile?git=https://github.com/alexlib/tau_thesis_lyx_template&target=Thesis-main.tex)
 Download 
 ---------
 
