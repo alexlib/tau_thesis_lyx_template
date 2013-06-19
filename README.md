@@ -28,6 +28,10 @@ Installation
 ------------
 
 
+Install Lyx: www.lyx.org (maybe you'll need to install separately LaTeX, maybe LyX will include everything).
+
+
+
 To install it:
 
 1. copy ```tauthesis.cls``` to the appropriate LaTeX folder, e.g. under Ubuntu, copy it to: /usr/share/texmf/tex/latex
