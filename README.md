@@ -1,7 +1,7 @@
 Tel Aviv University LaTeX and LyX styles
 -----------------------------------------
 
-Alex Liberzon, May 2012
+Alex Liberzon, July 2013
 http://www.eng.tau.ac.il/~alexlib
 
 Tel Aviv University LaTeX and LyX styles are adopted from the University of Canterbury LaTeX and LyX styles, 

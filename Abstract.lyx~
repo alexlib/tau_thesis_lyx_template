@@ -2,7 +2,7 @@
 \lyxformat 413
 \begin_document
 \begin_header
-\textclass report
+\textclass tauthesis
 \use_default_options true
 \maintain_unincluded_children false
 \language english
@@ -25,7 +25,7 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
-\spacing double
+\spacing onehalf
 \use_hyperref false
 \papersize default
 \use_geometry false
@@ -60,15 +60,13 @@
 
 \begin_body
 
-\begin_layout Chapter
-Appendix title
+\begin_layout Chapter*
+Abstract
 \end_layout
 
 \begin_layout Standard
-Appendix is just a different type of Section - it's included at the end
- of the document (after the bibliography or list of references) and before
- the Hebrew part and it's numbered in a different manner.
- 
+Here comes the 1-2 pages long abstract of the thesis in English.
+  
 \end_layout
 
 \end_body

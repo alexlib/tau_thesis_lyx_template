@@ -1,6 +1,6 @@
-%% LyX 2.0.3 created this file.  For more info, see http://www.lyx.org/.
+%% LyX 2.0.5.1 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
-\documentclass[12pt,oneside,english]{tauthesis}
+\documentclass[12pt,english]{report}
 \usepackage{mathptmx}
 \renewcommand{\familydefault}{\rmdefault}
 \usepackage[T1]{fontenc}
@@ -15,6 +15,7 @@
 \usepackage{pdfpages}
 \usepackage{graphicx}
 \usepackage{setspace}
+\usepackage[numbers]{natbib}
 \usepackage{nomencl}
 % the following is useful when we have the old nomencl.sty package
 \providecommand{\printnomenclature}{\printglossary}
@@ -33,12 +34,20 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{tauthesis}
 \usepackage[font={small,bf}, labelfont={small,bf}, margin=1cm]{caption}
-\Title{\textbf{Thesis Title}}
+\usepackage{titlesec}
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp}{0pt}{\Huge\bfseries}
+
+
+\Title{\textbf{Title of the thesis}}
 \Author{Israel Israeli}
-\Year{Month 2012}
+\Year{August 2013}
 \Supervisor{Prof. Israel Israeli}
 \Department{School of Mechanical Engineering}
+\Degree{Master of Science}
+% \Degree{Doctor of Philosophy}
 
 \makeatother
 
@@ -54,6 +63,9 @@ the file taulogo.png to get the logo of your department.
 
 Go to \textsf{Document > Settings > \LaTeX{} preamble} to modify the
 \textsf{Title, Author, Year, Supervisor, Department} fields.
+
+Default processor is now DVIPDFM - but if you can choose something
+else, try PDFLATEX and XELATEX - sometimes these are a bit faster. 
 \end{comment}
 
 
@@ -90,8 +102,10 @@ up/down and so on.
 
 \include{Introduction}
 
+
+
 \bibliographystyle{plainnat}
-\bibliography{IEEEabrv}
+\bibliography{references}
 
 
 \appendix

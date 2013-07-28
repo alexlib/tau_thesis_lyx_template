@@ -12,12 +12,10 @@
 
 
 \Title{\textbf{Title of the thesis}}
-\Author{Israel Israeli}
+\Author{Author of the Thesis}
 \Year{August 2013}
-\Supervisor{Prof. Israel Israeli}
+\Supervisor{Prof. Important Adviser}
 \Department{School of Mechanical Engineering}
-\Degree{Master of Science}
-% \Degree{Doctor of Philosophy}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children true

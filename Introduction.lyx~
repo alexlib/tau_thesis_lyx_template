@@ -2,9 +2,16 @@
 \lyxformat 413
 \begin_document
 \begin_header
-\textclass report
+\textclass tauthesis
 \use_default_options true
 \maintain_unincluded_children false
+\begin_local_layout
+#% Do not delete the line below; configure depends on this      
+#  \DeclareLaTeXClass{tauthesis}
+
+# Read the definitions from article.layout
+Input book.layout
+\end_local_layout
 \language english
 \language_package babel
 \inputencoding auto
