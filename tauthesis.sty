@@ -377,7 +377,7 @@
 %  ----  Preliminary pages  ---------------------------
 %
 \def\prelimpages{ % sets page numbering for the preliminary pages
-   \pagestyle{empty} % will be {plain} at start of toc
+   \pagestyle{plain} % Changed from {empty} to {plain} to allow numbering of included documents (with \include{}) under \prelimpages environment.
    \pagenumbering{roman}
    \setcounter{page}{1}
    \textheight 610pt  % add separation for page numbers (vers 1.3)
@@ -517,7 +517,7 @@
    \let\abstract\relax}
 %
 %
-%   Table of contents (right side page) (always page `i')
+%   Table of contents (right side page) (always page `i') ?? Not according to TAU format
 %
 %
 \def\textofToC#1{\gdef\@textofToC{#1}}  \textofToC{Table of Contents}
@@ -525,7 +525,7 @@
    \chapter*{\@textofToC\@mkboth{}{}}
    \pagestyle{plain}
    \thispagestyle{empty}
-   \setcounter{page}{1}
+   %\setcounter{page}{1} Commented out 
    {\let\footnotemark\relax  % in case one is in the title
    \@starttoc{toc}
     }
