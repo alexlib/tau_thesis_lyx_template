@@ -7,8 +7,8 @@
 \usepackage[latin9]{inputenc}
 \usepackage[a4paper]{geometry}
 \geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm,headheight=1cm,headsep=1cm,footskip=1cm}
-\setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{2} % Changed from 3 to 2. 0-chapter 1-section 2-subsection 
+\setcounter{tocdepth}{2} % Changed from 3 to 2. 0-chapter 1-section 2-subsection 
 \setlength{\parskip}{\medskipamount}
 \setlength{\parindent}{0pt}
 \usepackage{verbatim}
@@ -73,6 +73,8 @@ else, try PDFLATEX and XELATEX - sometimes these are a bit faster.
 
 \titlepage
 
+\acknowledgments{I would like to thank my ...}
+
 \begin{comment}
 Split the thesis into separate chapters. Use \textbackslash{}include
 mode to include the separate files.
@@ -83,30 +85,24 @@ on each item to change the default level of contents, move the chapters
 up/down and so on.
 \end{comment}
 
-
+\cleardoublepage
+\setcounter{page}{1} % Start preliminary pages numbering (roman numerals).
 \include{Abstract}
 
 \tableofcontents{}
 
-\acknowledgments{I would like to thank my ...}
-
-\textpages
-
 \listoffigures
-
 
 \listoftables
 
-
 \printnomenclature{}
+
+\textpages
 
 \include{Introduction}
 
-
-
 \bibliographystyle{plainnat}
 \bibliography{references}
-
 
 \appendix
 \include{appendix}
