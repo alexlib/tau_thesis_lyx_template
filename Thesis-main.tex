@@ -1,14 +1,14 @@
-%% LyX 2.0.5.1 created this file.  For more info, see http://www.lyx.org/.
+%% LyX 2.1.2.2 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
-\documentclass[12pt]{report}
+\documentclass[12pt,english]{report}
 \usepackage{mathptmx}
 \renewcommand{\familydefault}{\rmdefault}
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
 \usepackage[a4paper]{geometry}
 \geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm,headheight=1cm,headsep=1cm,footskip=1cm}
-\setcounter{secnumdepth}{2} % Changed from 3 to 2. 0-chapter 1-section 2-subsection 
-\setcounter{tocdepth}{2} % Changed from 3 to 2. 0-chapter 1-section 2-subsection 
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
 \setlength{\parskip}{\medskipamount}
 \setlength{\parindent}{0pt}
 \usepackage{verbatim}
@@ -41,38 +41,38 @@
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp}{0pt}{\Huge\bfseries}
 
 
-\Title{\textbf{Thesis Title}}
-\Author{First Last}
-\Year{August 2013}
-\Supervisor{Prof. Alex Liberzon}
+\Title{\textbf{TITLE OF THE THESIS}}
+\Author{\textbf{\large Ploni Israeli}}
+\Year{January 2015}
+\Supervisor{Prof. Israel Ploni}
 \Department{School of Mechanical Engineering}
-\Degree{Master of Science}
+\Degree{Master of Science in Mechanical Engineering}
 % \Degree{Doctor of Philosophy}
 
 \makeatother
 
+\usepackage{babel}
 \begin{document}
 \begin{comment}
 This is Micheal JasonSmith's uocthesis example ported to \LyX{} by
-Etienne Lalibertï¿½ (etiennlaliberte@gmail.com).
+Etienne Laliberté (etiennlaliberte@gmail.com).
 
 Alex Liberzon (alex.liberzon@gmail.com) modified it to the Tel Aviv
-University format, with the logo of the Faculty of Engineering. Change
-the file taulogo.png to get the logo of your department.
+University format, with the header of the Faculty of Engineering.
+You can open the tauthesis.sty to update it to your needs.
 
 Go to \textsf{Document > Settings > \LaTeX{} preamble} to modify the
 \textsf{Title, Author, Year, Supervisor, Department} fields.
 
-Default processor is now DVIPDFM - but if you can choose something
-else, try PDFLATEX and XELATEX - sometimes these are a bit faster. 
+Default processor is now PDFLATEX.
 \end{comment}
 
 
-\prelimpages
+\coverpage
 
 \titlepage
 
-\acknowledgments{I would like to thank my ...}
+\prelimpages
 
 \begin{comment}
 Split the thesis into separate chapters. Use \textbackslash{}include
@@ -84,25 +84,37 @@ on each item to change the default level of contents, move the chapters
 up/down and so on.
 \end{comment}
 
-\cleardoublepage
-\setcounter{page}{1} % Start preliminary pages numbering (roman numerals).
+
 \include{Abstract}
-    
 
 \tableofcontents{}
 
-\listoffigures
-
-\listoftables
-
-\printnomenclature{}
+\acknowledgments{I would like to thank my ...}
 
 \textpages
 
+\listoffigures
+
+
+\listoftables
+
+
+\printnomenclature{}
+
 \include{Introduction}
+
+\begin{comment}
+Want to add one more chapter, just copy paste the file introduction.lyx
+into the new\_chapter.lyx or anything like that and copy-paste the
+above line with Include: Introduction.lyx and change the name to new\_chapter.lyx.
+All the format and proper numbering of figures, tables, etc. will
+be automaticaly updated. Just start typing the text :)
+\end{comment}
+
 
 \bibliographystyle{plainnat}
 \bibliography{references}
+
 
 \appendix
 \include{appendix}
