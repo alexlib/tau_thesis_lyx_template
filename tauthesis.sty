@@ -10,9 +10,9 @@
 % 2001-10-27 Fixed layout bug with page-numbers.
 % 2008-10-02 Allow \\ in text (bug l. 211; c.f. l. 266, uwthesis.cls).
 % 
-\ProvidesClass{tauthesis}[2010/08/14]
+\ProvidesClass{tauthesis}[2014/01/05]
 \NeedsTeXFormat{LaTeX2e}
-\RequirePackage{graphicx}
+% \RequirePackage{graphicx}
 %
 % footnote stuff for option processing
 %
@@ -379,7 +379,7 @@
 \def\prelimpages{ % sets page numbering for the preliminary pages
    \pagestyle{plain} % Changed from {empty} to {plain} to allow numbering of included documents (with \include{}) under \prelimpages environment.
    \pagenumbering{roman}
-   \setcounter{page}{1}
+   \setcounter{page}{0}
    \textheight 610pt  % add separation for page numbers (vers 1.3)
    \footskip 40pt
    % \ifarchitect \textwidth 450pt \oddsidemargin 118pt\fi
@@ -395,22 +395,27 @@
 \def\Author#1{\gdef\@Author{#1}}
 \def\Year#1{\gdef\@Year{#1}}  \Year{\year}
 \def\Degree#1{\gdef\@Degree{#1}} \Degree{Doctor of Philosophy}
+%% as a supervisor is not necessarily a professor
+\def\Supervisor#1{\gdef\@Supervisor{#1}}
 
 %%TODO:
 %%  Add code to allow  M.Sc, M.A, M.E, M.FA degrees as well.
 %
 \def\School#1{\gdef\@School{#1}} \School{Tel Aviv University}
+\def\Department#1{\gdef\@Department{#1}} \Department{School of Mechanical Engineering}
 \def\Degreetext#1{\gdef\@Degreetext{#1}} 
-  \Degreetext{A thesis\\%
-    submitted in partial fulfilment\\%
-    of the requirements for the Degree\\%
-    of\\}
+  \Degreetext{A thesis submitted toward a degree of \\} %in partial fulfilment\\%
+    % of the requirements for the Degree\\%
+    %of\\}
 \newcount\@Signatures 
 \def\Signatures#1{\global\@Signatures=#1\relax}
   \Signatures{3} % number of signature lines
  
 \def\textofby#1{\gdef\@textofby{#1}}  \textofby{by}
 \def\textofApproved#1{\gdef\@textofApproved{#1}}  \textofApproved{Approved by}
+\def\textofsupervision#1{\gdef\@textofsupervision{#1}}  \textofsupervision{This work was carried out under the supervision of}
+\def\textofdepartment#1{\gdef\@textofdepartment{#1}}  \textofdepartment{This research was carried out in The} 
+
 \def\textofChair#1{\gdef\@textofChair{#1}}  
        \textofChair{(Chairperson of Supervisory Committee)}
 \def\textofProgram#1{\gdef\@textofProgram{#1}}  
@@ -430,13 +435,20 @@
     \begin{tabular}{l l}%
       \@Committee
     \end{tabular}}}
-
- \def\titlepage{                   % Prints the title page
+    
+    
+  \def\coverpage{                   % Prints the English cover page
     \thispagestyle{empty}
-            \centerline{\includegraphics[width=.9\textwidth]{taulogo}}
-    \vspace{84pt}
     \begin{center}
-      {\Large
+    \vspace{44pt}
+    % \centerline{\includegraphics[width=.9\textwidth]{taulogo}} % there is no logo on official title page http://www.eng.tau.ac.il/students/forms/format.pdf
+    \textbf{\huge TEL AVIV UNIVERSITY}\\
+    {\large 
+The Iby and Aladar Fleischman Faculty of Engineering\\
+The Zandman-Slaner School of Graduate Studies\\
+}
+    \vspace{40pt}
+      {\huge
       \lineskip 3ex
       \@Title\par}                  %% The Title
       \vskip0pt plus2fill\relax
@@ -453,15 +465,62 @@
       \par\vskip0pt plus1fill\relax
       %% \rule{37.5mm}{0.5pt}
     \end{center}
-     \vskip0pt plus1fill\relax
-    \ifx\@empty\@Committee         %% The Examining Committee (if known)
-    \else
-      \ExamCommittee
-    \fi
+%     \vskip0pt plus1fill\relax
+%    \ifx\@empty\@Committee         %% The Examining Committee (if known)
+%    \else
+%      \ExamCommittee
+%    \fi
     \begin{center}
       \large
       \par\vskip0pt plus2fill\relax
-      \@School                     %% School
+      % \@School                     %% School
+      \par%\vskip0pt plus2fill\relax
+      \@Year                       %% Year
+      \par
+    \end{center}
+    \mbox{}
+    \let\coverpage\relax}   
+
+ \def\titlepage{                   % Prints the title page
+    \thispagestyle{empty}
+    \begin{center}
+    \vspace{44pt}
+    % \centerline{\includegraphics[width=.9\textwidth]{taulogo}} % there is no logo on official title page http://www.eng.tau.ac.il/students/forms/format.pdf
+    \textbf{\huge TEL AVIV UNIVERSITY}\\
+    {\large 
+The Iby and Aladar Fleischman Faculty of Engineering\\
+The Zandman-Slaner School of Graduate Studies\\
+}
+    \vspace{40pt}
+    
+      {\huge
+      \lineskip 3ex
+      \@Title\par}                  %% The Title
+      \vskip0pt plus2fill\relax
+      %%\rule{75mm}{0.5pt}
+      \vskip0pt plus2fill\relax
+      \large
+      \@Degreetext                  %% A Thesis\ldots of
+      \par%\vskip0pt plus2fill\relax
+      \@Degree                      %% The Degree
+      \par%\vskip0pt plus2fill\relax
+      \@textofby
+      \par%\vskip0pt plus2fill\relax
+      \@Author                      %% Author
+      \par\vskip0pt plus1fill\relax
+      %% \rule{37.5mm}{0.5pt}
+	  \@textofdepartment
+      \par%\vskip0pt plus2fill\relax
+	  \@Department                      %% Supervisor
+      \par\vskip0pt plus1fill\relax
+	  \@textofsupervision
+      \par%\vskip0pt plus2fill\relax
+	  \@Supervisor                      %% Supervisor
+      \par\vskip0pt plus1fill\relax
+     
+      \large
+      \par\vskip0pt plus2fill\relax
+      % \@School                     %% School
       \par%\vskip0pt plus2fill\relax
       \@Year                       %% Year
       \par
@@ -651,5 +710,4 @@
 %% room. Thanks Andre Renaud for the fix.
 \fancyfoot[c]{\vspace{4pt}\thepage}
 
-%% as a supervisor is not necessarily a professor
-\def\Supervisor#1{\Professor{#1}}
+

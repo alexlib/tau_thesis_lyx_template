@@ -1,5 +1,5 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
 \textclass report
@@ -11,12 +11,12 @@
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp}{0pt}{\Huge\bfseries}
 
 
-\Title{\textbf{Title of the thesis}}
-\Author{Israel Israeli}
-\Year{August 2013}
-\Supervisor{Prof. Israel Israeli}
+\Title{\textbf{TITLE OF THE THESIS}}
+\Author{\textbf{\large Ploni Israeli}}
+\Year{January 2015}
+\Supervisor{Prof. Israel Ploni}
 \Department{School of Mechanical Engineering}
-\Degree{Master of Science}
+\Degree{Master of Science in Mechanical Engineering}
 % \Degree{Doctor of Philosophy}
 \end_preamble
 \use_default_options true
@@ -28,15 +28,15 @@
 \font_roman times
 \font_sans default
 \font_typewriter default
+\font_math auto
 \font_default_family rmdefault
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
-\default_output_format pdf3
+\default_output_format pdf2
 \output_sync 0
 \bibtex_command bibtex
 \index_command default
@@ -46,15 +46,24 @@
 \use_hyperref false
 \papersize a4paper
 \use_geometry true
-\use_amsmath 1
-\use_esint 1
-\use_mhchem 1
-\use_mathdots 1
-\cite_engine natbib_numerical
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type numerical
+\biblio_style plainnat
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 0
 \index Index
 \shortcut idx
@@ -95,8 +104,8 @@ This is Micheal JasonSmith's uocthesis example ported to LyX by Etienne
 
 \begin_layout Plain Layout
 Alex Liberzon (alex.liberzon@gmail.com) modified it to the Tel Aviv University
- format, with the logo of the Faculty of Engineering.
- Change the file taulogo.png to get the logo of your department.
+ format, with the header of the Faculty of Engineering.
+ You can open the tauthesis.sty to update it to your needs.
 \end_layout
 
 \begin_layout Plain Layout
@@ -112,9 +121,7 @@ Title, Author, Year, Supervisor, Department
 \end_layout
 
 \begin_layout Plain Layout
-Default processor is now DVIPDFM - but if you can choose something else,
- try PDFLATEX and XELATEX - sometimes these are a bit faster.
- 
+Default processor is now PDFLATEX.
 \end_layout
 
 \end_inset
@@ -130,7 +137,7 @@ status open
 
 
 \backslash
-prelimpages
+coverpage
 \end_layout
 
 \end_inset
@@ -147,6 +154,22 @@ status open
 
 \backslash
 titlepage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+prelimpages
 \end_layout
 
 \end_inset
@@ -265,7 +288,7 @@ filename "Introduction.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
+\begin_inset Note Comment
 status open
 
 \begin_layout Plain Layout
