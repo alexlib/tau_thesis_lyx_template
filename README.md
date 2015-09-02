@@ -30,14 +30,7 @@ Installation
 
 Install Lyx: www.lyx.org (maybe you'll need to install separately LaTeX, maybe LyX will include everything).
 
+No installation is required for the package, the directory is self-contained. 
+The LyX file ```Thesis-main.lyx``` uses report class as the default and the specific commands are listed in the ```tauthesis.sty```
 
-
-To install it:
-
-1. copy ```tauthesis.cls``` to the appropriate LaTeX folder, e.g. under Ubuntu, copy it to: /usr/share/texmf/tex/latex
-2. run "texhash" from the command line
-3. copy ```tauthesis.layout``` to the appropriate LyX folder, e.g. under Ubuntu, copy it to: /usr/share/lyx/layouts
-4. Reconfigure LyX by going to Tools > Reconfigure
-  *   In LyX, the tauthesis style should now be available as a new document class.
-  *   Make sure the TAU logo files (eps + pdf + png) are in the same folder as your document.
-5. Open the Thesis-main.lyx file, and replace the fields with your text to write your thesis.
+Open the ```Thesis-main.lyx``` file, and follow the instructions in the comments to replace the fields with your text. Most of the stuff is in ```Document -> Settings -> Latex preamble```
